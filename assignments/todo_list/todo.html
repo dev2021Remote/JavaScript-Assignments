@@ -7,11 +7,14 @@
             }
         </style>
     </head>
-    <body onload="calculatepara()">
+    <body onload="loadtodo()">
         <div>
-            <input type='text' name='todo_input' id="todo_input">
-            <button type='submit' onclick="addTodo()">Add Todo</button>
-            <div class='todos'></div>
+            <select onchange="handleChange()" id="option">
+                <option  selected>Complete</option>
+                <option>Pending</option>
+            </select>
+            <div id='complete_todos'></div>
+            <div id='pending_todos' style="display:none"></div>
         </div>
     </body>
     <script src='./script.js'></script>
